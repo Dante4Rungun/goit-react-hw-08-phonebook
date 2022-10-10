@@ -4,9 +4,6 @@ import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import { Header } from "components/Header/Header";
 import { Logo } from "components/Logo/Logo";
-import { Workspace } from "pages/Workspace";
-import { Welcome } from "pages/Welcome";
-
 
 export const Phonebook = () => {
 
