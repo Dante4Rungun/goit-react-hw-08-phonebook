@@ -8,7 +8,7 @@ const InitialState = {
     isRefreshing: false,
 }
 
-export const authSlice = createSlice({
+const authSlice = createSlice({
     name: "auth",
     initialState: InitialState,
     extraReducers: {
