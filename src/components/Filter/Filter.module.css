@@ -1,0 +1,24 @@
+.filter {
+    padding: 0 15px;
+}
+
+.filter__search {
+    width: 550px;
+    font-size: 21px;
+    border: none;
+    border-bottom: 1px solid rgb(151, 151, 151);
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin-top: 20px;
+    outline: none;
+}
+
+.filter__search:hover {
+    border-bottom: 1px solid rgb(0, 140, 255);
+}
+
+.filter__title{
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 30px;
+}
