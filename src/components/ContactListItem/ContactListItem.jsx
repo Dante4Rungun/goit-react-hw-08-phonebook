@@ -13,7 +13,7 @@ export const ContactListItem = ({ contact }) => {
                 <span>{contact.name}</span>
             </div>
             <div className={styled.item__number }>
-                <span>{contact.phone}</span>
+                <span>{contact.number}</span>
             </div>
             <button className={styled.filterList__btn} onClick={handleDelete}>Delete</button>
         </div>        

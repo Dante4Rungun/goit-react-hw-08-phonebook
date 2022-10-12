@@ -3,7 +3,7 @@ import { ContactForm } from "components/ContactForm/ContactForm";
 import { Filter } from "components/Filter/Filter";
 import { ContactList } from "components/ContactList/ContactList";
 
-export const Workspace = () => {
+export const Contacts = () => {
     return (
         <div>
             <ContactForm/>
