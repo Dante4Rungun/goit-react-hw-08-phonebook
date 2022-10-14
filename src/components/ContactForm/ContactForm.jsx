@@ -1,16 +1,23 @@
 import React from "react";
 import styled from "./ContactForm.module.css"
 import PropTypes from 'prop-types';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addContact } from "redux/operations";
+import { getContacts } from "redux/selectors";
+import Notiflix from "notiflix";
 
 export const ContactForm = () => {
     const dispatch = useDispatch()
-
+    const contacts = useSelector(getContacts)
+    
     const handleSubmit = event => {
         event.preventDefault()
         const form = event.target
-        dispatch(addContact({name: form.elements.name.value, number: form.elements.number.value }))
+
+        contacts.findIndex(contact => contact.name === form.elements.name.value) === -1 ?
+            dispatch(addContact({ name: form.elements.name.value, number: form.elements.number.value }))
+            :
+            Notiflix.Notify.warning(`Contact ${form.elements.name.value} exists in your phonebook`)
         form.reset()
     }
 
@@ -41,7 +48,7 @@ export const ContactForm = () => {
         </form>
     )
 }
-//onClick={addContact}
+
 ContactForm.propTypes = {
     addContact: PropTypes.func
 }
